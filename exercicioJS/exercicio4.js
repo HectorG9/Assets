@@ -1,0 +1,16 @@
+let pos = 2;
+
+switch (pos) {
+    case 1:
+        console.log('Primeiro lugar');
+        break;
+    case 2: 
+        console.log('Segundo lugar');
+        break;
+    case 3: 
+        console.log('Terceiro lugar');
+        break;
+    default:
+        console.log('Não subiu ao pódio!');
+}
+    

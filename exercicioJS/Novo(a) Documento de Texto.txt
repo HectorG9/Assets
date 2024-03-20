@@ -1,0 +1,15 @@
+Manipulação de uma Array:    
+let numeros = [10, 2, 15, 5];
+numeros.sort(function(a, b) {
+  return a - b;
+});
+console.log(numeros);
+
+  Quando temos um array de strings em JavaScript e precisamos ordená-lo alfabeticamente, podemos utilizar o método sort(). Esse método faz uma comparação lexicográfica entre os elementos do array e os ordena em ordem crescente. Por padrão, a ordenação é realizada de acordo com o valor Unicode de cada caractere.
+Além disso, é possível realizar uma ordenação personalizada, utilizando uma função de comparação como argumento do método sort(). Essa função recebe dois parâmetros e retorna um valor negativo se o primeiro parâmetro deve ser ordenado antes do segundo, um valor positivo se o primeiro parâmetro deve ser ordenado depois do segundo, ou zero se os dois parâmetros forem iguais. Veja um exemplo:
+
+    let numeros = [10, 2, 15, 5];
+numeros.sort(function(a, b) {
+  return a - b;
+});
+console.log(numeros);
