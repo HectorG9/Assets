@@ -1,0 +1,3 @@
+Bem-vindo ao Grid Garden, onde você escreve código CSS para cultivar seu jardim de cenouras! Regue apenas as áreas que possuem cenouras usando a grid-column-startpropriedade.
+
+Por exemplo, grid-column-start: 3;regará a área começando na 3ª linha vertical da grade, que é outra maneira de dizer a 3ª borda vertical a partir da esquerda na grade.

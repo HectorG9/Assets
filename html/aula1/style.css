@@ -1,0 +1,31 @@
+@charset "UTF-8";
+body {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin: 20px;
+    border: 5px solid burlywood;
+    padding: 30px;
+    border-radius: 10px;
+}  
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:cadetblue;
+    border: 5px solid black;
+    background-color: aqua;
+    padding: 15px;
+    margin: 15px;
+}
+
+h2, h3, h4, h5, h6 {
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+table, th, td{
+    border: 2px solid black;
+    padding: 20px;
+}

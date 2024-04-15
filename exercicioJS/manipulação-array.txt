@@ -1,0 +1,235 @@
+Arrays podem ser manipulados usando várias ações conhecidas como métodos. Alguns desses métodos nos permitem adicionar e remover elementos, modificar  os arrays e fazer muito mais com eles.
+
+Vou mostrar alguns desses métodos neste artigo. Vamos lá! :)
+
+Observação: utilizei arrow functions neste artigo. Se você não sabe o que isso significa, leia a respeito aqui. As arrow functions são um recurso da ES6.
+toString()
+O método toString() em JavaScript converte um array em uma string separada por vírgulas.
+
+let cores = ['verde', 'amarelo', 'azul'];
+
+console.log(cores.toString()); // verde,amarelo,azul
+join()
+O método join() em JavaScript combina todos os elementos do array em uma string.
+
+Ele é semelhante ao método toString(), mas, aqui, você pode especificar o separador em vez da vírgula padrão.
+
+let cores = ['verde', 'amarelo', 'azul'];
+
+console.log(cores.join('-')); // verde-amarelo-azul
+concat
+Este método combina dois arrays ou adiciona mais itens a um array e depois retorna um novo array.
+
+let numerosIniciais = [1, 2, 3];
+let numerosFinais = [4, 5, 6];
+let unidos = numerosIniciais.concat(numerosFinais);
+console.log(unidos); // [1, 2, 3, 4, 5, 6]
+push()
+Este método adiciona itens ao final de um array e altera o array original.
+
+let navegadores = ['chrome', 'firefox', 'edge'];
+navegadores.push('safari', 'opera mini');
+console.log(navegadores); 
+// ["chrome", "firefox", "edge", "safari", "opera mini"]
+pop()
+Este método remove o último item de um array e o retorna.
+
+let navegadores = ['chrome', 'firefox', 'edge'];
+navegadores.pop(); // "edge"
+console.log(navegadores); // ["chrome", "firefox"]
+shift()
+Este método remove o primeiro item de um array e o retorna.
+
+let navegadores = ['chrome', 'firefox', 'edge'];
+navegadores.shift(); // "chrome"
+console.log(navegadores); // ["firefox", "edge"]
+unshift()
+Este método adiciona um ou vários itens ao início de um array e altera o array original.
+
+let navegadores = ['chrome', 'firefox', 'edge'];
+navegadores.unshift('safari');
+console.log(navegadores); //  ["safari", "chrome", "firefox", "edge"]
+É possível adicionar vários itens ao mesmo tempo
+splice()
+Este método altera um array, adicionando, removendo e inserindo elementos.
+
+A sintaxe é:
+
+array.splice(indice[, contagemDeExclusao, elemento1, ..., elementoN])
+indice aqui é o ponto inicial de remoção de elementos do array
+contagemDeExclusao é o número de elementos a serem excluídos do array a partir do índice
+elemento1, ..., elementoN são os elementos a serem adicionados
+Remoção de itens
+
+depois de executar splice(), ele retorna o array com os itens removidos e os remove do array original.
+let cores = ['verde', 'amarelo', 'azul', 'roxo'];
+cores.splice(0, 3);
+console.log(cores); // ["roxo"]
+// exclui ["verde", "amarelo", "azul"]
+Observação: contagemDeExclusao não inclui o último índice do intervalo.
+Se o segundo parâmetro não for declarado, todos os elementos a começar do índice fornecido serão removidos do array:
+
+let cores = ['verde', 'amarelo', 'azul', 'roxo'];
+cores.splice(3);
+console.log(cores); // ["verde", "amarelo", "azul"]
+// exclui ['roxo']
+No próximo exemplo, removeremos 3 elementos do array e os substituiremos por mais itens:
+
+let agenda = ['Eu', 'tenho', 'um', 'compromisso', 'amanhã'];
+// remove os 4 primeiros elementos e os substitui por outros
+agenda.splice(0, 4, 'Nós', 'vamos', 'nadar');
+console.log(agenda); 
+// ["Nós", "vamos", "nadar", "amanhã"]
+Adição de itens
+
+Para adicionar itens, precisamos definir contagemDeExclusao como zero
+
+let agenda = ['Eu', 'tenho', 'um', 'compromisso', 'com'];
+// adiciona 3 novos elementos ao array
+agenda.splice(5, 0, 'alguns', 'clientes', 'amanhã');
+console.log(agenda); 
+// ["Eu", "tenho", "um", "compromisso", "com", "alguns", "clientes", "amanhã"]
+slice()
+Este método se assemelha a splice(), mas é muito diferente. Ele retorna subarrays em vez de substrings.
+Este método copia uma parte dada de um array e retorna aquela parte copiada como um novo array. Ele não altera o array original.
+
+A sintaxe é:
+
+array.slice(início, fim)
+Aqui temos um exemplo básico:
+
+let numeros = [1, 2, 3, 4]
+numeros.slice(0, 3)
+// retorna [1, 2, 3]
+console.log(numeros) // retorna o array original
+A melhor forma de se usar slice() é atribui-lo a uma nova variável.
+
+let mensagem = 'congratulations'
+const abbrv = mensagem.slice(0, 7) + 's!'; 
+console.log(abbrv) // retorna "congrats!" (forma abreviada de Congratulations)
+split()
+Este método é usado para strings. Ele divide uma string em substrings e as retorna como um array.
+
+A sintaxe é: string.split(separador, limite);
+
+O separador aqui define como dividir uma string, por vírgula ou outro separador.
+O limite determina o número de divisões que devem ser realizadas
+let nome = 'Bolaji';
+// retorna a string como um array
+nome.split() // ["Bolaji"]
+Outro exemplo:
+
+let nome = 'Olá, meu nome é Bolaji, e eu sou desenvolvedor.';
+nome.split(',', 2); // ["Olá", " meu nome é Bolaji"]
+Observação: se declararmos um array vazio, como nome,split('');, cada item da string será dividido em substrings:
+let nome = 'Bolaji';
+nome.split('') // ["B", "o", "l", "a", "j", "i"]
+indexOf()
+Este método procura por um item em um array e retorna o índice onde ele foi encontrado. Do contrário, ele retorna -1
+
+let frutas = ['maçã', 'laranja', false, 3]
+frutas.indexOf('laranja'); // retorna 1
+frutas.indexOf(3); // retorna 3
+frutas.indexOf(null); // retorna -1 (não encontrado)
+lastIndexOf()
+Este método funciona da mesma forma que indexOf(), com a exceção de que ele funciona da direita para a esquerda. Ele retorna o último índice onde o item foi encontrado.
+
+let frutas = ['maçã', 'laranja', false, 3, 'maçã']
+frutas.lastIndexOf('maçã'); // retorna 4
+filter()
+Este método cria um array se os itens de um array passarem em determinado teste de condição.
+
+A sintaxe é:
+
+let resultados = array.filter(function(item, indice, array) {
+  // retorna true se o item passar no teste do filtro
+});
+Exemplo:
+
+Verificar usuários que são da Nigéria
+
+const countryCode = ['+234', '+144', '+233', '+234'];
+const nigerianos = countryCode.filter( code => code === '+234');
+console.log(nigerianos); // ["+234", "+234"]
+map()
+Este método cria um array manipulando valores de outro array.
+
+Exemplo:
+
+Exibir nomes de usuário em uma página (Exibição básica de uma lista de amigos)
+
+const userNames = ['tina', 'danny', 'mark', 'bolaji'];
+const display = userNames.map(item => {
+return '<li>' + item + '</li>';
+})
+const render = '<ul>' + display.join('') + '</ul>';
+document.write(render);
+
+reduce()
+Este método é bom para o cálculo de totais.
+
+reduce() é usado para calcular um único valor com base em um array.
+
+let value = array.reduce(function(valorAnterior, item, indice, array) {
+  // ...
+}, inicial);
+Exemplo:
+
+Para percorrer um array e somar todos os números desse array, podemos usar o laço for of.
+const numeros = [100, 300, 500, 70];
+let soma = 0;
+for (let n of numeros) {
+soma += n;
+}
+console.log(soma);
+Aqui vemos como fazer o mesmo com reduce()
+
+const numeros = [100, 300, 500, 70];
+const soma = numeros.reduce((acumulador, valor) =>
+acumulador + valor
+, 0);
+console.log(soma); // 970
+Ao omitir o valor inicial, o total iniciará por padrão do primeiro item do array.
+const numeros = [100, 300, 500, 70];
+const soma = numeros.reduce((acumulador, valor) => acumulador + valor);
+console.log(soma); // retorna 970 do mesmo modo
+O trecho abaixo mostra como o método reduce() funciona com todos os quatro argumentos.
+forEach()
+Este método é bom para a iteração por meio de um array.
+
+Ele aplica uma função a todos os itens de um array
+
+const cores = ['verde', 'amarelo', 'azul'];
+cores.forEach((item, indice) => console.log(indice, item));
+// retorna os índices e os itens de um array
+// 0 "verde"
+// 1 "amarelo"
+// 2 "azul"
+A iteração pode ser feita sem passar o argumento índice
+
+const cores = ['verde', 'amarelo', 'azul'];
+cores.forEach((item) => console.log(item));
+// retorna todos os itens do array
+// "verde"
+// "amarelo"
+// "azul"
+every()
+Este método verifica se todos os itens de um array passam a condição especificada e retornam true se o teste passar, ou false do contrário.
+
+verifica se todos os números são positivos
+const numeros = [1, -1, 2, 3];
+let todosPositivos = numbers.every((valor) => {
+return valor >= 0;
+})
+console.log(todosPositivos); // retornaria false
+some()
+Este método verifica se um item (um ou mais) de um array passa(m) a condição especificada e retornam true se o teste passar, ou false do contrário.
+
+verifica se ao menos um número é positivo
+const numeros = [1, -1, 2, 3];
+let aoMenosUmPositivo = numeros.some((valor) => {
+return valor >= 0;
+})
+console.log(aoMenosUmPositivo); // retornaria true
+includes()
+Este método verifica se um array contém determinado item. É semelhante a .some(), porém em vez de buscar uma condição específica para passar, ele verifica se o array contém um item específico.

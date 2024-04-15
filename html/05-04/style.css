@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+#box {
+    display: flex; 
+    color: white;
+    border: 2px solid black;
+    /*flex-wrap: wrap;*/
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#box1 {
+    background-color: chocolate;
+    color: black;
+    display: flex;
+    width: 800px;
+    height: 80px;
+}
+
+#box2 {
+    background-color: cadetblue;
+    display: flex;
+    width: 500px;
+    height: 80px;
+}
+
+#box3 {
+    background-color: cornflowerblue;
+    display: flex;
+    width: 500px;
+    height: 80px;
+}
+
+#box4 {
+    background-color: crimson;
+    display: flex;
+    width: 700px;
+    height: 80px;
+}
+
+#box5 {
+    background-color: darkblue;
+    display: flex;
+    width: 500px;
+    height: 80px;
+}  
+
+#box6 {
+    background-color: darkcyan;
+    display: flex;
+    width: 950px;
+    height: 80px;
+}

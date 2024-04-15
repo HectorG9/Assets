@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.caixaC {
+    display: flex;
+    gap: 10px;
+}
+
+.caixaC #box1 {
+    background-color: brown;
+    border: 2px solid black;
+    width: 1100px;
+    height: 100px;
+}
+
+.caixaC #box2 {
+    background-color: brown;
+    border: 2px solid black;
+    width: 500px;
+    height: 100px;
+}
+
+.caixaM {
+    display: flex;
+    gap: 10px; 
+}
+
+.caixaM .box1 {
+    background-color: coral;
+    border: 2px solid black;
+    margin-top: 10px;
+    height: 435px;
+    width: 900px;
+}
+
+.caixaM .pai_meio {
+    display: flex;
+    flex-direction: column;
+}
+
+.caixaM .pai_meio .box2{
+    margin-top: 10px;
+    background-color: rebeccapurple;
+    border: 2px solid black;
+    width: 700px;
+    height: 210px;
+}
+
+.caixaB {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.caixaB .box1 {
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    width: 530px;
+    height: 100px;
+}
+
