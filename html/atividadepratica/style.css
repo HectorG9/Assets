@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    border: 2px solid red;
+    height: auto;
+}
+ 
+header {
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 200px;
+}
+
+#header {
+    color: white;
+    font-size: 52px;
+    text-align: center;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+a:hover {
+    color: rgb(201, 8, 8);
+    transition: 0.5s;
+}
+
+h2 {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 27px;
+}
+
+.img {
+    display: flex;
+    padding: 10px;
+    gap: 100%;
+    width: 600px;
+    height: 400px;
+}
+.box {
+    justify-content: space-between; 
+    display: flex;
+}
+
+p {
+    width: 200px;
+    padding: 20px;
+}
+
+#cima {
+    background-color: rgb(201, 8, 8);
+    color: white;
+}
+
+#meio {
+    background-color: rgb(243, 58, 58);
+    color: white;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.icones {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: rgb(243, 58, 58);
+    color: white;
+    margin-top: 10px;
+}
+
